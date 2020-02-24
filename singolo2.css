@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1020px;
+    padding: 0 40px
+}
+
+.portfolio_wrapper {
+    min-height: 870px;
+    background-color: #2d303a;
+    border-bottom: 5px solid #323746;
+}
+
+.portfolio_heading {
+    padding-top: 67px;
+    color: #666d89;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.portfolio_descr {
+    color: #767e9e;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 25px;
+    text-align: left;
+}
+
+.portfolio_tabs {
+    display: flex;
+    padding-top: 15px;
+}
+
+.portfolio_item_tab {
+    margin-right: 15px;
+    color: #767e9e;
+    font-size: 12px;
+    font-weight: 400;
+    border: 1px solid #666d89;
+    border-radius: 10%;
+    background-color: #2d303a;
+    padding: 5px;
+    cursor: pointer;
+    transition: .5s color;
+    outline: none;
+}
+
+.portfolio_item_tab.active_item_tab {
+    color: #DEDEDE;
+    border-color: #C5C5C5;
+    transition: .5s color;
+}
+
+.portfolio_item_tab:hover {
+    border-color: #DEDEDE;
+    color: #DEDEDE;
+}
+
+.portfolio_row {
+    display: flex;
+    padding-top: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.portfolio_image_item:not(:last-child) {
+    padding-right: 17px;
+}
+
+.aboutus_wrapper {
+    min-height: 738px;
+    background-color: #F2F2F2;
+    border-bottom: 5px solid #FFFFFF;
+}
+
+.aboutus_heading {
+    padding-top: 67px;
+    font-weight: 900;
+    font-size: 30px;
+    color: #666D89;
+}
+
+.aboutus_descr {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767E9E;
+    padding-top: 33px;
+}
+
+.team_member_section {
+    display: flex;
+    padding-top: 19px
+}
+
+.team_member_item {
+    min-width: 331px;
+    margin-right: -10px;
+}
+
+.team_member_heading {
+    padding-top: 17px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #666D89;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 0;
+    text-overflow: ellipsis;
+    width: auto;
+    max-width: 223px;
+}
+
+.team_memeber_descr {
+    padding-top: 13px;
+    min-height: 32px;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767E9E;
+}
+
+.team_social_links {
+    padding-top: 27px;
+    display: flex;
+    cursor: pointer;
+}
+
+.team_social_links i {
+    margin-right: 5px;
+    color: #767E9E;
+    border: 1px solid #767E9E;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s color;
+}
+
+.team_social_links i:hover {
+    background-color: #767E9E;
+    color: #FFFFFF;
+}
+
+.fa-facebook-f::before {
+    font-family: "FontAwesome";
+    content: "\f39e";
+    font-style: normal;
+}
+
+.fa-google-plus-g::before {
+    font-family: "FontAwesome";
+    content: "\f0d5";
+    font-style: normal;
+}
+
+.fa-twitter::before {
+    font-family: "FontAwesome";
+    content: "\f099";
+    font-style: normal;
+}
+
+.fa-linkedin-in::before {
+    font-family: "FontAwesome";
+    content: "\f0e1";
+    font-style: normal;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+
+    .portfolio_row,
+    .team_member_section {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .portfolio_heading,
+    .portfolio_descr {
+        text-align: center;
+    }
+
+    .portfolio_image_item {
+        padding: 17px 17px;
+    }
+
+    .aboutus_section {
+        text-align: center;
+    }
+
+    .team_member_item {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        width: 350px;
+        align-items: center;
+    }
+}
