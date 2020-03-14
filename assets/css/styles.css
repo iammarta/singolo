@@ -749,26 +749,38 @@ input#submit_btn:hover {
         top: -5px;
         left: 60px;
     }
-
+    .slides {
+        position: relative;
+    }
     .slide_img {
         height: auto;
     }
 
     .slide_img_overlay {
+<<<<<<< HEAD
+=======
         top: 27%;
+>>>>>>> eb4d61166fe1e53f6d39fc4d3b37fc388df4bcb8
         width: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
     }
 
     .vertical_mobile_img {
         height: 185px;
-        margin-top: -1rem;
-        left: 4rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
-
     .horizontal_mobile_img {
         height: 90px;
-        margin-top: -6rem;
-        left: 10rem;
+        margin-left: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .arrow_left {
