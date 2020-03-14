@@ -755,7 +755,7 @@ input#submit_btn:hover {
     }
 
     .slide_img_overlay {
-        top: 25%;
+        top: 27%;
         width: 50%;
     }
 
@@ -972,6 +972,6 @@ input#submit_btn:hover {
         height: 171px !important;
     }
     .slide_img_overlay {
-        top: 33%;
+        top: 30%;
     }
 }
