@@ -13,33 +13,48 @@
     <header class="header_wrapper">
         <div class="container">
             <div class="header_section">
-                <a href="#" class="header_logo_link">
+                <a href="#" id="home" class="header_logo_link">
                     <div class="logo_block_tagline">singolo</div>
                     <div class="logo_block_decoration">*</div>
                 </a>
                 <nav class="menu_block">
                     <ul class="navigation_menu">
-                        <li class="menu_item"><a href="#" class="menu_link" id="home">Home</a></li>
-                        <li class="menu_item"><a href="#" class="menu_link">Services</a></li>
-                        <li class="menu_item"><a href="#" class="menu_link">Portfolio</a></li>
-                        <li class="menu_item"><a href="#" class="menu_link">About</a></li>
-                        <li class="menu_item"><a href="#" class="menu_link">Contact</a></li>
+                        <li class="menu_item"><a href="#home" class="menu_link active_link ">Home</a></li>
+                        <li class="menu_item"><a href="#services" class="menu_link">Services</a></li>
+                        <li class="menu_item"><a href="#portfolio" class="menu_link">Portfolio</a></li>
+                        <li class="menu_item"><a href="#about" class="menu_link">About</a></li>
+                        <li class="menu_item"><a href="#contact" class="menu_link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-        </div>
-    </header>
-    <section class="slider_wrapper">
-        <div class="container">
-            <div class="slider_section">
-                <div class="vertical_mobile"><img class="vertical_mobile_img"
-                        src="assets/img/bg_img/vertical_mobile.png" alt="mobile"></div>
-                <div class="horizontal_mobile"><img class="horizontal_mobile_img"
-                        src="assets/img/bg_img/horizontal_mobile.png" alt="mobile"></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+       
+    </header>
+    <section class="slider_wrapper">
+        <div class="slides">
+    <img src="assets/img/bg_img/slider_bg.jpg" alt="pink background" class="slide_img">
+    <img class="vertical_mobile_img" src="assets/img/bg_img/phone-vertical.png" alt="mobile">
+    <img class="horizontal_mobile_img" src="assets/img/bg_img/phone-horizontal.png" alt="mobile">
+        </div>
+        <div class="slides">
+            <img src="assets/img/bg_img/slider-bg2.png" alt="blue_background" class="slide_img">
+            <img src="assets/img/bg_img/mobiles.png" alt="mobile" class="slide_img_overlay">
+        </div>
+        <div class="slider_nav">
+            <div class="prev">
+                <div class="arrow_left"></div>
+            </div>
+            <div class="next">
+                <div class="arrow_right"></div>
+                </div>
+    </div>
     </section>
-    <section class="services_wrapper">
+    <section class="services_wrapper" id="services">
         <div class="container">
             <div class="services_section">
                 <h1 class="services_title">Our Services</h1>
@@ -47,6 +62,7 @@
                     mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
                     dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
             </div>
+            <div class="service_table">
             <div class="services_first_row">
                 <div class="service_item_wrap">
                     <div class="services_item_img"><img src="assets/img/icon_img/pen.png" alt=""></div>
@@ -99,9 +115,10 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
-    <section class="portfolio_wrapper">
+    <section class="portfolio_wrapper" id="portfolio">
         <div class="container">
             <div class="portfolio_section">
                 <h2 class="portfolio_heading">Portfolio</h2>
@@ -148,7 +165,7 @@
             </div>
         </div>
     </section>
-    <section class="aboutus_wrapper">
+    <section class="aboutus_wrapper" id="about">
         <div class="container">
             <div class="aboutus_section">
                 <h2 class="aboutus_heading">About Us</h2>
@@ -194,7 +211,7 @@
             </div>
         </div>
     </section>
-    <section class="contact_wrapper">
+    <section class="contact_wrapper" id="contact">
         <div class="container">
             <div class="contact_section">
                 <h2 class="contact_title">Get a Quote</h2>
@@ -214,6 +231,20 @@
                                 placeholder="Descripe your project in deatil...">
                             <input type="submit" value="Submit" id="submit_btn">
                         </form>
+                        <div class="fade">
+                            <div class="contact_message">
+                                <div class="status_message">Письмо отправлено</div>
+                                <div class="subject_wrapper">
+                                    <div class="topic_message">Тема:</div>
+                                    <div class="text_subject"></div>
+                                </div>
+                                <div class="describe_wrapper">
+                                    <div class="describe_message">Описание:</div>
+                                    <div class="text_describe"></div>
+                                </div>
+                                <button class="button_message">OK</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="contact_info_wrap">
                         <div class="contact_info_title">Contact information</div>
@@ -245,7 +276,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
