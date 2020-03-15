@@ -1,10 +1,17 @@
 window.addEventListener('DOMContentLoaded', function () {
+
+
     let hamburger = document.querySelector(".hamburger");
     let header = document.querySelector(".header_wrapper");
     let menu_item = document.querySelectorAll(".menu_item");
     let menu_block = document.querySelector(".menu_block");
     let logo = document.querySelector(".header_logo_link");
-    hamburger.addEventListener('click', function () {
+
+
+/* Hamburger Menu*/
+    toggleMenu();
+    function toggleMenu(){
+        hamburger.addEventListener('click', function () {
         hamburger.classList.toggle("hamburger_active");
         header.classList.toggle("header_wrapper_active");
         if (header.classList.contains("header_wrapper_active")) {
@@ -22,7 +29,13 @@ window.addEventListener('DOMContentLoaded', function () {
             logo.style.right = "";
         }
     });
+    }
 
+
+
+/* Active menu items*/
+activeMenu();
+function activeMenu(){
     for (let i = 0; i < menu_item.length; i++) {
         menu_item[i].addEventListener('click', function () {
             hamburger.classList.toggle("hamburger_active");
@@ -37,9 +50,14 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+}
 
+
+
+/* Active home menu item*/
+logoHome();
+function logoHome(){
     let link = document.querySelectorAll(".menu_link");
-
     for (let i = 0; i < link.length; i++) {
         logo.addEventListener("click", function () {
             link[0].classList.add("active_link");
@@ -50,12 +68,17 @@ window.addEventListener('DOMContentLoaded', function () {
             current[0].className = current[0].className.replace("active_link", "");
             this.className += " active_link";
         });
-
     }
+}
 
-    let portfolio_tabs = document.querySelector(".portfolio_tabs");
-    let portfolio_item = portfolio_tabs.getElementsByTagName("button");
 
+let portfolio_tabs = document.querySelector(".portfolio_tabs");
+let portfolio_item = portfolio_tabs.getElementsByTagName("button");
+let portfolio_row = document.querySelectorAll(".portfolio_row");
+
+/* Active portfolio tabs*/
+portfolioTabs();
+function portfolioTabs(){
     for (let i = 0; i < portfolio_item.length; i++) {
         portfolio_item[i].addEventListener('click', function () {
             let current = document.getElementsByClassName("active_item_tab");
@@ -63,9 +86,13 @@ window.addEventListener('DOMContentLoaded', function () {
             this.className += " active_item_tab";
         });
     }
+}
 
+
+/* active portfolio image*/
+portfolioImage()
+function portfolioImage(){
     let portfolio_img = document.querySelectorAll(".portfolio_image");
-
     for (let i = 0; i < portfolio_img.length; i++) {
         portfolio_img[i].addEventListener('click', function () {
             let current = document.getElementsByClassName("portfolio_image_style");
@@ -75,11 +102,12 @@ window.addEventListener('DOMContentLoaded', function () {
             this.className += " portfolio_image_style";
         });
     }
+}
 
 
-    /* TABS*/
-    let portfolio_row = document.querySelectorAll(".portfolio_row");
-
+    /* Portfolio image animation*/
+portfolioAnimate();
+function portfolioAnimate(){
     function leftContent(a) {
         for (let i = 0; i < portfolio_row.length; i++) {
             portfolio_row[i].classList.add('left');
@@ -93,7 +121,6 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
     portfolio_tabs.addEventListener('click', function (event) {
         let target = event.target;
         if (target && target.classList.contains('portfolio_item_tab')) {
@@ -106,6 +133,7 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+}
 
     let overlay = document.querySelector(".contact_message");
     let contact_btn = document.getElementById("submit_btn");
@@ -119,6 +147,11 @@ window.addEventListener('DOMContentLoaded', function () {
     let form = document.querySelector(".contact_form");
     let fade = document.querySelector(".fade");
 
+
+
+/* Contact form pop up*/
+    contactFormOpen();
+    function contactFormOpen(){
     contact_btn.addEventListener("click", function (e) {
         if (name.value == "" || email.value == "") {
             return false;
@@ -140,21 +173,28 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+}
 
+function contactFormClose(){
     close_btn.addEventListener("click", function () {
         overlay.style.display = "none";
         fade.style.display = 'none';
         document.body.style.overflow = '';
         form.reset();
     });
+}
 
+
+
+/* Slides switching*/
+sliderFunctionality();
+function sliderFunctionality(){
     let slider_item = document.querySelectorAll(".slides");
     let sliderIndex = 1;
     let prev = document.querySelector(".prev");
     let next = document.querySelector(".next");
 
     function showSlides(n) {
-
         if (n > slider_item.length) {
             sliderIndex = 1;
         }
@@ -184,10 +224,14 @@ window.addEventListener('DOMContentLoaded', function () {
     next.addEventListener("click", function () {
         plusSlider(1);
     });
+}
 
 
+
+/* Mobile screen on-off*/
+mobileScreen();
+function mobileScreen(){
     let vertical_mobile = document.querySelector(".vertical_mobile_img");
-
 
     vertical_mobile.addEventListener("click", function () {
         if (vertical_mobile.src.endsWith("phone-vertical.png")) {
@@ -206,5 +250,6 @@ window.addEventListener('DOMContentLoaded', function () {
             horizontal_mobile.src = "assets/img/bg_img/phone-horizontal.png";
         }
     });
+}
 
 });
