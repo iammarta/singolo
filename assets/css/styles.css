@@ -136,6 +136,7 @@ html {
     left: 0;
     bottom: 345px;
     cursor: pointer;
+    margin: 15px;
 }
 
 .arrow_right {
@@ -146,13 +147,14 @@ html {
     right: 0;
     bottom: 345px;
     cursor: pointer;
+    margin: 15px;
 }
 
 .vertical_mobile_img {
     max-width: 215px;
     height: 458px;
     top: 135px;
-    left: 23%;
+    left: 20%;
     position: absolute;
 }
 
@@ -171,7 +173,6 @@ html {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
-
 
 .services_wrapper {
     min-height: 430px;
@@ -769,7 +770,7 @@ input#submit_btn:hover {
         height: 185px;
         position: absolute;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-30%, -50%);
     }
     .horizontal_mobile_img {
         height: 90px;
@@ -781,11 +782,11 @@ input#submit_btn:hover {
     }
 
     .arrow_left {
-        bottom: 125px;
+        bottom: 110px;
     }
 
     .arrow_right {
-        bottom: 125px;
+        bottom: 110px;
     }
 
     .services_first_row,
@@ -923,8 +924,8 @@ input#submit_btn:hover {
         left: 15%;
     }
     img.slide_img_overlay {
-        top: 60%;
-        width: 60%;
+        top: 40%;
+        width: 55%;
     }
 
     .service_table {
@@ -983,4 +984,22 @@ input#submit_btn:hover {
     .slide_img_overlay {
         top: 30%;
     }
+    img.slide_img_overlay {
+        width: 40%;
+    }
 }
+@media(min-width: 1500px){
+    .horizontal_mobile_img {
+        right: 28%;
+    }
+    .vertical_mobile_img {
+        left: 30%;
+    }
+}
+@media(min-width: 1200px){
+img.slide_img_overlay {
+    top: 40%;
+    width: 30%;
+}
+}
+
