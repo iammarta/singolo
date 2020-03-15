@@ -990,7 +990,7 @@ input#submit_btn:hover {
 }
 @media(min-width: 1500px){
     .horizontal_mobile_img {
-        right: 28%;
+        right: 26%;
     }
     .vertical_mobile_img {
         left: 30%;
