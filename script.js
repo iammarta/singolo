@@ -174,7 +174,8 @@ function portfolioAnimate(){
         }
     });
 }
-
+    
+contactFormClose()
 function contactFormClose(){
     close_btn.addEventListener("click", function () {
         overlay.style.display = "none";
