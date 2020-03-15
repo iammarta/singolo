@@ -998,7 +998,7 @@ input#submit_btn:hover {
 }
 @media(min-width: 1200px){
 img.slide_img_overlay {
-    top: 40%;
+    top: 45%;
     width: 30%;
 }
 }
