@@ -125,7 +125,7 @@ function portfolioAnimate(){
         let target = event.target;
         if (target && target.classList.contains('portfolio_item_tab')) {
             for (let i = 0; i < portfolio_item.length; i++) {
-                if (target == portfolio_item[i]) {
+                if (target == portfolio_item[i+1]) {
                     leftContent(i);
                     rightContent(i);
                     break;
